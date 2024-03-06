@@ -6,29 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>933</width>
-    <height>700</height>
+    <width>876</width>
+    <height>663</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Emissions</string>
+   <string>                                                                                  Gestion Des Emissions</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTabWidget" name="tabWidget_">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>20</y>
+      <x>10</x>
+      <y>0</y>
       <width>861</width>
       <height>601</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(227, 227, 227);
-font: 9pt &quot;Sitka&quot;;</string>
+
+font: 9pt &quot;Sylfaen&quot;;</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -47,22 +51,6 @@ font: 9pt &quot;Sitka&quot;;</string>
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14">
-      <property name="geometry">
-       <rect>
-        <x>800</x>
-        <y>30</y>
-        <width>41</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image: url(:/new/prefix1/Tri.png);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QTableView" name="table_AfficherEmission">
       <property name="geometry">
        <rect>
@@ -73,73 +61,8 @@ font: 9pt &quot;Sitka&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true"/>
       </property>
-     </widget>
-     <widget class="QLabel" name="label_20">
-      <property name="geometry">
-       <rect>
-        <x>800</x>
-        <y>30</y>
-        <width>41</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image: url(:/new/prefix1/Tri.png);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_41">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>30</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(155, 1, 1);</string>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Catégorie :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_4">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>30</y>
-        <width>201</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Action</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Drame</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Historique</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Documentaire</string>
-       </property>
-      </item>
      </widget>
      <widget class="QLabel" name="label_40">
       <property name="geometry">
@@ -190,15 +113,95 @@ image: url(:/new/prefix1/Logo.png);</string>
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_regarder">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>30</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonRef">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>30</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>40</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/new/prefix1/ac.png);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonTri">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>30</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>30</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+image: url(:/new/prefix1/Tri.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
      <zorder>label_2</zorder>
      <zorder>verticalScrollBar</zorder>
-     <zorder>label_14</zorder>
      <zorder>table_AfficherEmission</zorder>
-     <zorder>label_20</zorder>
-     <zorder>label_41</zorder>
-     <zorder>comboBox_4</zorder>
      <zorder>label_40</zorder>
      <zorder>label_44</zorder>
+     <zorder>pushButton_regarder</zorder>
+     <zorder>pushButtonRef</zorder>
+     <zorder>label_14</zorder>
+     <zorder>pushButtonTri</zorder>
+     <zorder>label_20</zorder>
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -239,7 +242,7 @@ image: url(:/new/prefix1/Logo.png);</string>
         <x>160</x>
         <y>182</y>
         <width>151</width>
-        <height>20</height>
+        <height>16</height>
        </rect>
       </property>
       <property name="text">
@@ -263,8 +266,8 @@ image: url(:/new/prefix1/Logo.png);</string>
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>221</y>
-        <width>101</width>
+        <y>222</y>
+        <width>131</width>
         <height>20</height>
        </rect>
       </property>
@@ -291,7 +294,7 @@ image: url(:/new/prefix1/Logo.png);</string>
         <x>490</x>
         <y>140</y>
         <width>101</width>
-        <height>16</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="text">
@@ -379,7 +382,7 @@ image: url(:/new/prefix1/Logo.png);</string>
      <widget class="QPushButton" name="pushButton_Ajouter">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>310</x>
         <y>390</y>
         <width>111</width>
         <height>31</height>
@@ -410,8 +413,15 @@ padding-right:20px;
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
+      <property name="date">
+       <date>
+        <year>2024</year>
+        <month>4</month>
+        <day>7</day>
+       </date>
+      </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_10">
+     <widget class="QPushButton" name="pushButton_QuitterAjouter">
       <property name="geometry">
        <rect>
         <x>430</x>
@@ -465,13 +475,13 @@ padding-right:20px;
      <zorder>lineEdit_Description</zorder>
      <zorder>pushButton_Ajouter</zorder>
      <zorder>dateEdit</zorder>
-     <zorder>pushButton_10</zorder>
+     <zorder>pushButton_QuitterAjouter</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
       <string>Modifier</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton_9">
+     <widget class="QPushButton" name="pushButton_QuitterModifier">
       <property name="geometry">
        <rect>
         <x>430</x>
@@ -493,28 +503,6 @@ padding-right:20px;
        <string>Quitter</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_Modifier">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>390</y>
-        <width>111</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 0, 0);
-border :1px solid rgb(255, 255, 255);
-border-radius :10px;
-color: #FFF;
-padding-left: 20px;
-padding-right:20px;
-</string>
-      </property>
-      <property name="text">
-       <string>Modifier</string>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="lineEdit_IdEmission_M">
       <property name="geometry">
        <rect>
@@ -531,7 +519,7 @@ padding-right:20px;
      <widget class="QLineEdit" name="lineEdit_Realisateur_M">
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>580</x>
         <y>180</y>
         <width>151</width>
         <height>21</height>
@@ -579,14 +567,21 @@ padding-right:20px;
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
+      <property name="date">
+       <date>
+        <year>2024</year>
+        <month>4</month>
+        <day>7</day>
+       </date>
+      </property>
      </widget>
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
         <x>160</x>
         <y>181</y>
-        <width>121</width>
-        <height>20</height>
+        <width>131</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="text">
@@ -596,7 +591,7 @@ padding-right:20px;
      <widget class="QLineEdit" name="lineEdit_Duree_M">
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>580</x>
         <y>220</y>
         <width>151</width>
         <height>22</height>
@@ -677,7 +672,7 @@ padding-right:20px;
      <widget class="QLineEdit" name="lineEdit_Categorie_M">
       <property name="geometry">
        <rect>
-        <x>570</x>
+        <x>580</x>
         <y>140</y>
         <width>151</width>
         <height>22</height>
@@ -692,8 +687,8 @@ padding-right:20px;
        <rect>
         <x>490</x>
         <y>180</y>
-        <width>71</width>
-        <height>20</height>
+        <width>81</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="text">
@@ -716,9 +711,93 @@ padding-right:20px;
        <string/>
       </property>
      </widget>
+     <widget class="QLineEdit" name="lineEdit_recherID">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>20</y>
+        <width>151</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonRechID">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>20</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_valider">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>390</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+</string>
+      </property>
+      <property name="text">
+       <string>valider</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>20</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 1, 1);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Id Emission :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>20</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/new/prefix1/Recherche.png);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
      <zorder>label_3</zorder>
-     <zorder>pushButton_9</zorder>
-     <zorder>pushButton_Modifier</zorder>
+     <zorder>pushButton_QuitterModifier</zorder>
      <zorder>lineEdit_IdEmission_M</zorder>
      <zorder>lineEdit_Realisateur_M</zorder>
      <zorder>label_9</zorder>
@@ -733,6 +812,11 @@ padding-right:20px;
      <zorder>label_18</zorder>
      <zorder>lineEdit_Categorie_M</zorder>
      <zorder>label_19</zorder>
+     <zorder>lineEdit_recherID</zorder>
+     <zorder>pushButtonRechID</zorder>
+     <zorder>pushButton_valider</zorder>
+     <zorder>label_21</zorder>
+     <zorder>label_29</zorder>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -741,9 +825,9 @@ padding-right:20px;
      <widget class="QLabel" name="label_39">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>270</y>
-        <width>101</width>
+        <x>240</x>
+        <y>230</y>
+        <width>91</width>
         <height>31</height>
        </rect>
       </property>
@@ -754,12 +838,12 @@ padding-right:20px;
        <string>Id Emission :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_Recherche">
+     <widget class="QLineEdit" name="lineEdit_RechercheIdSup">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>270</y>
-        <width>201</width>
+        <x>330</x>
+        <y>230</y>
+        <width>181</width>
         <height>31</height>
        </rect>
       </property>
@@ -770,23 +854,17 @@ padding-right:20px;
      <widget class="QPushButton" name="pushButton_supprimer">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>360</y>
-        <width>201</width>
-        <height>41</height>
+        <x>510</x>
+        <y>230</y>
+        <width>51</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 0, 0);
-border :1px solid rgb(255, 255, 255);
-border-radius :10px;
-color: #FFF;
-padding-left: 20px;
-padding-right:20px;
-</string>
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Supprimer</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="label_4">
@@ -805,23 +883,6 @@ padding-right:20px;
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label_28">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>270</y>
-        <width>31</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image: url(:/new/prefix1/Recherche.png);
-background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButtonRecherche">
       <property name="geometry">
        <rect>
@@ -835,12 +896,52 @@ background-color: rgb(255, 255, 255);</string>
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButtonsuptout">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>360</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+</string>
+      </property>
+      <property name="text">
+       <string>Supprimer Tout</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>230</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/new/prefix1/p.png);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
      <zorder>pushButtonRecherche</zorder>
      <zorder>label_4</zorder>
      <zorder>label_39</zorder>
-     <zorder>lineEdit_Recherche</zorder>
+     <zorder>lineEdit_RechercheIdSup</zorder>
      <zorder>pushButton_supprimer</zorder>
-     <zorder>label_28</zorder>
+     <zorder>pushButtonsuptout</zorder>
+     <zorder>label_22</zorder>
     </widget>
    </widget>
   </widget>
@@ -849,7 +950,7 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>933</width>
+     <width>876</width>
      <height>26</height>
     </rect>
    </property>

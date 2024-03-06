@@ -27,6 +27,7 @@ public:
     QDate getDate_emission();
     QString getDescription();
 
+
     //Setters Pour definir la valeur
     void setID(int id_emission);
     void setTitre(QString t);
@@ -36,11 +37,17 @@ public:
     void setDate_emission(QDate da);
     void setDescription(QString de);
 
+
     bool ajouter();
     QSqlQueryModel * afficher();
     bool supprimer(int);
     bool modifier(int,QString,QString,QString,QString,QDate,QString);
     QSqlQueryModel * rechercher(int);
+    Emissions rechercherEmission(int);
+    bool supprimerTout();
+    bool existeId(int);
+    bool existeTitre(QString);
+    QSqlQueryModel * trierParDate();
 
 };
 

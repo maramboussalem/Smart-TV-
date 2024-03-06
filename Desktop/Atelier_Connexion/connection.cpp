@@ -1,10 +1,6 @@
 #include "connection.h"
 
-Connection::Connection()
-{
-
-}
-
+Connection::Connection(){}
 bool Connection::createconnect()
 {
     bool test=false;
@@ -12,14 +8,10 @@ bool Connection::createconnect()
     db.setDatabaseName("Smart_TV");
     db.setUserName("system");//inserer nom de l'utilisateur
     db.setPassword("123");//inserer mot de passe de cet utilisateur
-
     if (db.open())
-
-    test=true;
-
+    {
+       test=true;
+    }
     return  test;
 }
-void Connection::closeConnection()
-{
-    db.close();
-}
+void Connection::closeConnection(){db.close();}

@@ -8,8 +8,8 @@ class Connection
 {
     QSqlDatabase db;
 public:
-    Connection();
-    bool createconnect();
+     Connection();
+     bool createconnect();
      void closeConnection();
 };
 
