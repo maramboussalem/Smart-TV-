@@ -2,7 +2,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QDebug>
-
+#include <QtCharts>
 Emissions::Emissions()
 {
       id_emission=0;
@@ -158,10 +158,14 @@ bool Emissions::existeTitre(QString titre)
     return false;
 }
 
-QSqlQueryModel * Emissions::trierParDate()
+
+QSqlQueryModel * Emissions::trierPar(QString colonne, QString ordre)
 {
     QSqlQueryModel * model = new QSqlQueryModel();
-    model->setQuery("SELECT * FROM emissions ORDER BY id_emission ASC");
+    QSqlQuery query;
+    query.prepare("SELECT * FROM emissions ORDER BY " + colonne + " " + ordre);
+    query.exec();
+    model->setQuery(query);
 
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("IdEmission"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Titre"));
@@ -171,5 +175,137 @@ QSqlQueryModel * Emissions::trierParDate()
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("Duree"));
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("Description"));
 
-  return model;
+    return model;
+}
+
+void Emissions::statistiquesParCategorie()
+{
+    QSqlQuery query("SELECT categorie, COUNT(*) FROM emissions GROUP BY categorie");
+        QtCharts::QBarSeries *series = new QtCharts::QBarSeries();
+
+        while (query.next())
+        {
+            QString categorie = query.value(0).toString();
+            int count = query.value(1).toInt();
+
+            QtCharts::QBarSet *set = new QtCharts::QBarSet(categorie); // Utilisez la catégorie comme libellé
+            *set << count;
+
+            series->append(set);
+        }
+
+        QtCharts::QChart *chart = new QtCharts::QChart();
+        chart->addSeries(series);
+        chart->setTitle("Nombre d'émissions par catégorie");
+        chart->setAnimationOptions(QtCharts::QChart::SeriesAnimations);
+
+        QStringList categories;
+        categories << "Catégories"; // Ajoutez les noms de vos catégories ici
+
+        QtCharts::QBarCategoryAxis *axis = new QtCharts::QBarCategoryAxis();
+        axis->append(categories);
+        chart->createDefaultAxes();
+        chart->setAxisX(axis, series);
+        chart->legend()->setVisible(true);
+
+        QtCharts::QChartView *chartView = new QtCharts::QChartView(chart);
+        chartView->resize(900, 600);
+        chartView->show();
+}
+
+QSqlQueryModel * Emissions::rechercherParid_emission(int id_emission)
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+
+        // Vérifiez si l'id_emission est valide (différent de zéro)
+        if(id_emission != 0)
+        {
+            // Utilisez des paramètres liés pour éviter les injections SQL
+            QSqlQuery query;
+            query.prepare("SELECT * FROM emissions WHERE id_emission = :id");
+            query.bindValue(":id", id_emission);
+
+            if(!query.exec())
+            {
+                // Gérer les erreurs d'exécution de la requête
+                qDebug() << "Erreur lors de l'exécution de la requête :" << query.lastError().text();
+            }
+            else
+            {
+                // Définir la requête sur le modèle
+                model->setQuery(query);
+            }
+        }
+        else
+        {
+            // Si l'id_emission est vide, récupérez toutes les émissions
+            model->setQuery("SELECT * FROM emissions");
+        }
+
+        return model;
+}
+QSqlQueryModel * Emissions::rechercherParTitre(QString titre)
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        if(titre.isEmpty()){
+            model->setQuery("SELECT * FROM emissions");
+        }
+        else{
+            model->setQuery("SELECT * FROM emissions WHERE titre='" + titre + "'");
+        }
+        return model;
+}
+QSqlQueryModel * Emissions::rechercherParCategorie(QString categorie)
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        if(categorie.isEmpty()){
+            model->setQuery("SELECT * FROM emissions");
+        }
+        else{
+            model->setQuery("SELECT * FROM emissions WHERE categorie='" + categorie + "'");
+        }
+        return model;
+}
+
+QSqlQueryModel * Emissions::rechercherParrealisateur(QString realisateur)
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        if(realisateur.isEmpty()){
+            model->setQuery("SELECT * FROM emissions");
+        }
+        else{
+            model->setQuery("SELECT * FROM emissions WHERE realisateur='" + realisateur + "'");
+        }
+        return model;
+}
+QSqlQueryModel * Emissions::rechercherParduree(QString duree)
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        if(duree.isEmpty()){
+            model->setQuery("SELECT * FROM emissions");
+        }
+        else{
+            model->setQuery("SELECT * FROM emissions WHERE duree='" + duree + "'");
+        }
+        return model;
+}
+QSqlQueryModel * Emissions::rechercherPardate_emission(QDate date_emission)
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+        QSqlQuery query;
+
+        if (!date_emission.isValid()) {
+            query.prepare("SELECT * FROM emissions");
+        } else {
+            query.prepare("SELECT * FROM emissions WHERE date_emission = :date");
+            query.bindValue(":date", date_emission);
+        }
+
+        if (!query.exec()) {
+            qDebug() << "Erreur lors de l'exécution de la requête :" << query.lastError().text();
+        } else {
+            model->setQuery(query);
+        }
+
+        return model;
 }

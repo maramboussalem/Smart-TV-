@@ -9,6 +9,14 @@
 #include <QFileDialog>
 #include <QMediaPlayer>
 #include <QVideoWidget>
+#include <QString>
+
+
+#include <QComboBox>
+#include <QRadioButton>
+#include <QPushButton>
+#include <QVBoxLayout>
+#include <QMessageBox>
 
 namespace Ui {
 class MainWindow;
@@ -51,9 +59,37 @@ private slots:
 
     void on_pushButtonTri_clicked();
 
+    void on_pushButtonPdf_clicked();
+
+    void on_pushButtonExcel_clicked();
+
+    void on_pushButtonstat_clicked();
+
+    void on_pushButton_rechCat_clicked();
+
+    void on_comboBoxTri_activated(int index);
+
+    void on_radioButtonC_toggled(bool checked);
+
+    void on_pushButtonValidier_recherche_clicked();
+
+    void on_pushButtonTelecharger_clicked();
+
+    void on_pushButtonImprimer_clicked();
+
+    void on_pushButtoneee_clicked();
+
 private:
     Ui::MainWindow *ui;
     Emissions Etmp;
+
+        QVBoxLayout *mainLayout;
+        QComboBox *comboBoxTri;
+        QRadioButton *radioButtonCroissant;
+        QRadioButton *radioButtonDecroissant;
+        QPushButton *pushButtonTri;
+
+        void setupUI();
 };
 
 #endif // MAINWINDOW_H

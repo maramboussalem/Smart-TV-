@@ -43,11 +43,24 @@ public:
     bool supprimer(int);
     bool modifier(int,QString,QString,QString,QString,QDate,QString);
     QSqlQueryModel * rechercher(int);
+
+    QSqlQueryModel * rechercherParid_emission(int);
+    QSqlQueryModel * rechercherParCategorie(QString);
+    QSqlQueryModel * rechercherParTitre(QString);
+    QSqlQueryModel * rechercherParrealisateur(QString);
+    QSqlQueryModel * rechercherParduree(QString );
+    QSqlQueryModel * rechercherPardate_emission(QDate);
+
+
     Emissions rechercherEmission(int);
     bool supprimerTout();
     bool existeId(int);
     bool existeTitre(QString);
+
     QSqlQueryModel * trierParDate();
+    void statistiquesParCategorie();
+
+    QSqlQueryModel * trierPar(QString,QString);
 
 };
 
