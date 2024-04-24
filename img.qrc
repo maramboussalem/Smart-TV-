@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/imgback">
+        <file>img.qrc</file>
+    </qresource>
+    <qresource prefix="/new/prefix1">
+        <file>422112051_685019823787946_3501015430639793139_n.png</file>
+        <file>ah.png</file>
+        <file>u1.png</file>
+        <file>u2.png</file>
+        <file>u3.png</file>
+        <file>u4.png</file>
+        <file>u5.png</file>
+        <file>u6.png</file>
+    </qresource>
+</RCC>
