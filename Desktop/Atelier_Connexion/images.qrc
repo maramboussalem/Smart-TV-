@@ -1,7 +1,0 @@
-<RCC>
-    <qresource prefix="/new/prefix1">
-        <file>Logo.png</file>
-        <file>Recherche.png</file>
-        <file>Tri.png</file>
-    </qresource>
-</RCC>
