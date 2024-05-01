@@ -15,6 +15,13 @@ public:
     explicit lpublicite(QWidget *parent = nullptr);
     ~lpublicite();
 
+
+
+private slots:
+    void on_Connecter_clicked();
+    
+    void on_Retour_clicked();
+    
 private:
     Ui::lpublicite *ui;
 };

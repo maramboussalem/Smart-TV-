@@ -15,6 +15,11 @@ public:
     explicit levennement(QWidget *parent = nullptr);
     ~levennement();
 
+private slots:
+    void on_Connecter_clicked();
+
+    void on_Retour_clicked();
+
 private:
     Ui::levennement *ui;
 };

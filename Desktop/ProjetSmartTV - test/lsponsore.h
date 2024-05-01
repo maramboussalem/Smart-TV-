@@ -15,6 +15,13 @@ public:
     explicit lsponsore(QWidget *parent = nullptr);
     ~lsponsore();
 
+private slots:
+    void on_Connecter_2_clicked();
+    
+    void on_Connecter_clicked();
+
+    void on_Retour_clicked();
+
 private:
     Ui::lsponsore *ui;
 };

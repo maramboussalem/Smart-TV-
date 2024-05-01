@@ -15,6 +15,11 @@ public:
     explicit lequipement(QWidget *parent = nullptr);
     ~lequipement();
 
+private slots:
+    void on_Connecter_clicked();
+
+    void on_Retour_clicked();
+
 private:
     Ui::lequipement *ui;
 };
