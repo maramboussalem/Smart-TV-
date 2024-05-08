@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/new/prefix2">
+        <file>PDF.png</file>
+        <file>Recherche.png</file>
+        <file>sousTitrage.png</file>
+        <file>Supprimer.png</file>
+        <file>video.png</file>
+        <file>act.png</file>
+        <file>Excel.png</file>
+        <file>imprimer.png</file>
+    </qresource>
+</RCC>
