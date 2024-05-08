@@ -24,16 +24,16 @@ void lemployes::on_Connecter_clicked()
 
         // Créer une structure de données pour stocker les adresses e-mail et les mots de passe correspondants
         QMap<QString, QString> emailPasswords;
-        emailPasswords.insert("employes@gmail.com", "eya123");
+        emailPasswords.insert("employes@gmail.com", "eya123"); // Mot de passe stocké en clair (à des fins de démonstration)
 
         // Vérifier si l'adresse e-mail saisie est dans la liste des adresses valides
         if (emailPasswords.contains(email)) {
             // Vérifier si le mot de passe est correct pour cette adresse e-mail
             if (emailPasswords[email] == password) {
-                // Si le mot de passe est correct, fermer la boîte de dialogue
+                // Si le mot de passe est correct, ouvrir la boîte de dialogue employement
                 employement employementDialog;
-                    employementDialog.exec();
-                close();
+                employementDialog.show(); // Afficher le dialogue
+                close(); // Fermer la fenêtre actuelle (si nécessaire)
             } else {
                 QMessageBox::warning(this, "Erreur", "Mot de passe incorrect.");
             }

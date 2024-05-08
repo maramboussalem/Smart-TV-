@@ -27,6 +27,7 @@ SOURCES += \
     employes.cpp \
     equipement.cpp \
     evenement.cpp \
+    gestionemployee.cpp \
     lemission.cpp \
     lemployes.cpp \
     lequipement.cpp \
@@ -49,6 +50,7 @@ HEADERS += \
     employes.h \
     equipement.h \
     evenement.h \
+    gestionemployee.h \
     lemission.h \
     lemployes.h \
     lequipement.h \
@@ -67,6 +69,7 @@ FORMS += \
     employement.ui \
     equipement.ui \
     evenement.ui \
+    gestionemployee.ui \
     lemission.ui \
     lemployes.ui \
     lequipement.ui \

@@ -150,6 +150,9 @@ border:none;
 border:none;
  border-bottom: 3px solid black;</string>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
     <property name="placeholderText">
      <string>Mot de passe</string>
     </property>
