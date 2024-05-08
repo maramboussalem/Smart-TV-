@@ -94,7 +94,7 @@ Item {
                 id: image
                 width: 50 // Adjust according to your marker image size
                 height: 50 // Adjust according to your marker image size
-                source: "qrc:/../../../../Downloads/Map-Marker-Pin-PNG-Image-Background.png" // Ensure the URL is correct and accessible
+                source: "qrc:/new/prefix1/Map-Marker-Pin-PNG-Image-Background.png" // Ensure the URL is correct and accessible
             }
         }
     }
@@ -104,4 +104,3 @@ Item {
         setLocationMarking(33.5039800, 11.1121500);
     }
 }
-

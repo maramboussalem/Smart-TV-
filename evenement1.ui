@@ -31,7 +31,7 @@
 font: 9pt &quot;Sylfaen&quot;;</string>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -232,7 +232,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>260</y>
+        <y>220</y>
         <width>241</width>
         <height>22</height>
        </rect>
@@ -245,8 +245,8 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>260</y>
-        <width>47</width>
+        <y>220</y>
+        <width>111</width>
         <height>21</height>
        </rect>
       </property>
@@ -261,8 +261,8 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>220</y>
-        <width>101</width>
+        <y>190</y>
+        <width>111</width>
         <height>21</height>
        </rect>
       </property>
@@ -277,7 +277,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>180</y>
+        <y>160</y>
         <width>241</width>
         <height>20</height>
        </rect>
@@ -290,9 +290,9 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>300</y>
+        <y>310</y>
         <width>241</width>
-        <height>71</height>
+        <height>61</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -303,7 +303,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>290</y>
+        <y>310</y>
         <width>111</width>
         <height>41</height>
        </rect>
@@ -341,8 +341,8 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>180</y>
-        <width>91</width>
+        <y>160</y>
+        <width>101</width>
         <height>21</height>
        </rect>
       </property>
@@ -379,7 +379,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>220</y>
+        <y>190</y>
         <width>241</width>
         <height>22</height>
        </rect>
@@ -434,6 +434,64 @@ padding-right:20px;
        <string/>
       </property>
      </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>280</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(227, 227, 228);</string>
+      </property>
+      <property name="text">
+       <string>Latitude :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="longtitude">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>250</y>
+        <width>241</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>250</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(227, 227, 228);</string>
+      </property>
+      <property name="text">
+       <string>Longtitude  :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="latitude">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>280</y>
+        <width>241</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
      <zorder>label_3</zorder>
      <zorder>date</zorder>
      <zorder>label_21</zorder>
@@ -445,6 +503,10 @@ padding-right:20px;
      <zorder>label_20</zorder>
      <zorder>pushButton_12</zorder>
      <zorder>category</zorder>
+     <zorder>label_30</zorder>
+     <zorder>longtitude</zorder>
+     <zorder>label_24</zorder>
+     <zorder>latitude</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -453,8 +515,8 @@ padding-right:20px;
      <widget class="QPushButton" name="Rechercher_button">
       <property name="geometry">
        <rect>
-        <x>590</x>
-        <y>130</y>
+        <x>600</x>
+        <y>120</y>
         <width>121</width>
         <height>31</height>
        </rect>
@@ -476,7 +538,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>280</y>
+        <y>310</y>
         <width>111</width>
         <height>41</height>
        </rect>
@@ -492,7 +554,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>210</y>
+        <y>190</y>
         <width>101</width>
         <height>21</height>
        </rect>
@@ -508,7 +570,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>250</y>
+        <y>220</y>
         <width>47</width>
         <height>21</height>
        </rect>
@@ -559,7 +621,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>170</y>
+        <y>160</y>
         <width>91</width>
         <height>21</height>
        </rect>
@@ -575,7 +637,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>170</y>
+        <y>160</y>
         <width>241</width>
         <height>20</height>
        </rect>
@@ -604,7 +666,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>250</y>
+        <y>220</y>
         <width>241</width>
         <height>22</height>
        </rect>
@@ -617,9 +679,9 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>290</y>
+        <y>310</y>
         <width>241</width>
-        <height>71</height>
+        <height>61</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -652,7 +714,7 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>210</y>
+        <y>190</y>
         <width>241</width>
         <height>22</height>
        </rect>
@@ -704,6 +766,64 @@ padding-right:20px;
        <string/>
       </property>
      </widget>
+     <widget class="QLineEdit" name="latitude_modif">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>280</y>
+        <width>241</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="longtitude_modif">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>250</y>
+        <width>241</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>280</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(227, 227, 228);</string>
+      </property>
+      <property name="text">
+       <string>Latitude :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>250</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(227, 227, 228);</string>
+      </property>
+      <property name="text">
+       <string>Longtitude  :</string>
+      </property>
+     </widget>
      <zorder>label_4</zorder>
      <zorder>Rechercher_button</zorder>
      <zorder>label_27</zorder>
@@ -718,6 +838,10 @@ padding-right:20px;
      <zorder>description_modif</zorder>
      <zorder>pushButton_17</zorder>
      <zorder>category_modif</zorder>
+     <zorder>latitude_modif</zorder>
+     <zorder>longtitude_modif</zorder>
+     <zorder>label_31</zorder>
+     <zorder>label_32</zorder>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -803,9 +927,22 @@ padding-right:20px;
       <property name="geometry">
        <rect>
         <x>830</x>
-        <y>10</y>
-        <width>10</width>
-        <height>10</height>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_stat">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>821</width>
+        <height>501</height>
        </rect>
       </property>
       <property name="text">
@@ -815,7 +952,7 @@ padding-right:20px;
     </widget>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
-      <string>Location</string>
+      <string>Localisation</string>
      </attribute>
      <widget class="QLineEdit" name="id_location">
       <property name="geometry">

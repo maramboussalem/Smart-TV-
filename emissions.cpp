@@ -82,10 +82,8 @@ void Emissions::update_label()
     }
     if (data == "UP"){
         int id_emission = ui->lineEditRechercheTableau->text().toInt();
-
         Entite_emission Etmp;
         QSqlQueryModel *model = Etmp.rechercherParid_emission(id_emission);
-
         if (model->rowCount() > 0){
             // Si un enregistrement existe, déclencher la fonction pour regarder l'émission
             on_pushButton_2_clicked();
@@ -101,13 +99,16 @@ void Emissions::update_label()
     if (data == "OK"){
         on_pushButton_Play_Pause_clicked();
     }else if (data == "LEFT"){
-        on_pushButton_Seek_Backward_clicked();
+       // on_pushButton_Seek_Backward_clicked();
+        ui->lineEditRechercheTableau->clear();
     }else if (data == "RIGHT"){
         on_pushButton_Seek_Forward_clicked();
     }else if (data == "DOWN"){
         on_pushButton_Volume_clicked();
     }else if (data == "*"){
         on_pushButtonSousTitrage_clicked();
+    }else if (data == "#"){
+        on_pushButton_3_clicked();
     }else{
         qDebug() << "Unknown button pressed. Data:" << data;
     }

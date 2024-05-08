@@ -3,12 +3,14 @@
 #include <QMessageBox>
 #include "entite_evenment.h"
 #include "map.h"
-#include<QFileDialog>
-#include<QPrinter>
-//#include <QtCharts/QChart>
-//#include <QtCharts/QChartView>
-//#include <QtCharts/QBarSeries>
-//#include <QtCharts/QBarCategoryAxis>
+#include <QFileDialog>
+#include <QPrinter>
+#include <QChart>
+#include <QPainter>
+#include <QtCharts>
+#include <QtCharts/QChartView>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QChart>
 Evenement1::Evenement1(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Evenement1)
@@ -19,6 +21,8 @@ Evenement1::Evenement1(QWidget *parent) :
     ui->date_modif->setEnabled(false);
     ui->description_modif->setEnabled(false);
     ui->category_modif->setEnabled(false);
+    ui->longtitude_modif->setEnabled(false);
+    ui->latitude_modif->setEnabled(false);
 }
 
 Evenement1::~Evenement1()
@@ -30,17 +34,20 @@ Evenement1::~Evenement1()
 
 void Evenement1::on_Location_clicked()
 {
-//    int id = ui->id_location->text().toInt();
-    Map * mapEvent = new Map(this);
-//    mapEvent->show();
-//    std::pair<double, double> coordinates = getLocationCoordinatesById(id);
+    int id = ui->id_location->text().toInt();
+        Map * mapEvent = new Map(this);
+    //    mapEvent->show();
+    //    std::pair<double, double> coordinates = getLocationCoordinatesById(id);
+         int latitude = ev.getLatitudeById(id);
+         int longititude = ev.getLongititudeById(id);
 
-       // Assuming you have a pointer to the map widget
-//       mapEvent->setCenterPosition(coordinates.first, coordinates.second);
-//       mapEvent->setLocationMarking(coordinates.first, coordinates.second);
-    mapEvent->setCenterPosition(48.8584, 2.2945);
-    mapEvent->setLocationMarking (48.8584, 2.2945);
-    mapEvent->show();
+           // Assuming you have a pointer to the map widget
+    //       mapEvent->setCenterPosition(coordinates.first, coordinates.second);
+    //       mapEvent->setLocationMarking(coordinates.first, coordinates.second);
+        mapEvent->setCenterPosition(latitude, longititude);
+        mapEvent->setLocationMarking (latitude, longititude);
+        mapEvent->show();
+
 }
 
 void Evenement1::on_ajouter_button_clicked()
@@ -48,6 +55,8 @@ void Evenement1::on_ajouter_button_clicked()
     //int id = ui->id->text().toInt();
 
     int id =NULL;
+    float latitude = ui->latitude->text().toFloat();
+    float  longtitude= ui->longtitude->text().toFloat();
     QString titre = ui->titre->text();
     QString category = ui->category->currentText();
     QString description = ui->description->toPlainText();
@@ -92,7 +101,7 @@ void Evenement1::on_ajouter_button_clicked()
                              QObject::tr("La date que vous avez saisir est revolue"),QMessageBox::Cancel);
         return;
      }
-    Entite_evenment ev (id, titre, category,date, description,"zarzis");
+    Entite_evenment ev (id, titre, category,date, description,latitude,longtitude);
     bool test = ev.ajouter();
     if(test) {
        // ui->id->clear();
@@ -138,11 +147,14 @@ void Evenement1::on_supprimer_button_clicked()
 void Evenement1::on_modifier_button_clicked()
 {
     int id = ui->id_modif->text().toInt();
+    float latitude = ui->latitude_modif->text().toFloat();
+    float longtitude = ui->longtitude_modif->text().toFloat();
     QString titre = ui->titre_modif->text();
     QString category = ui->category_modif->currentText();
     QDateTime date = ui->date_modif->dateTime();
     QString description = ui->description_modif->toPlainText();
-    Entite_evenment em (id, titre, category,date,description,"zarzis");
+
+    Entite_evenment em (id, titre, category,date,description,latitude,longtitude);
     QDateTime currentDateTime = QDateTime::currentDateTime();
     QString specialChars = "@#$%&'()*+,-./=<>\±×÷€£¥$@§©®™°^_~₽₹฿";
      bool containsSpecialChars = false;
@@ -193,6 +205,8 @@ void Evenement1::on_modifier_button_clicked()
         ui->category_modif->setEnabled(false);
         ui->date_modif->setEnabled(false);
         ui->description_modif->setEnabled(false);
+        ui->latitude_modif->setEnabled(false);
+         ui->longtitude_modif->setEnabled(false);
         //fin du code update l affichage ui
         //code pour vider les champs saisie
         ui->id_modif->clear();
@@ -200,6 +214,8 @@ void Evenement1::on_modifier_button_clicked()
         ui->description_modif->clear();
         ui->category_modif->clear();
         ui->date_modif->clear();
+        ui->latitude_modif->clear();
+        ui->longtitude_modif->clear();
         // fin du code de vider les champs
         QMessageBox::information(nullptr,QObject::tr("insertion"),
                                QObject::tr("modification avec success.\n"),QMessageBox::Cancel);
@@ -228,12 +244,17 @@ void Evenement1::on_Rechercher_button_clicked()
         ui->date_modif->setEnabled(true);
         ui->description_modif->setEnabled(true);
         ui->category_modif->setEnabled(true);
+        ui->latitude_modif->setEnabled(true);
+        ui->longtitude_modif->setEnabled(true);
         // update the inputs with the data getted from the database
         ui->id_modif->setEnabled(false);
         ui->titre_modif->setText(ev.getTitre());
         ui->date_modif->setDateTime(ev.getDate());
         ui->description_modif->setText(ev.getDescription());
-//        ui->category_modif->//(ev.getCategory());
+        ui->latitude_modif->setText(QString::number(ev.getLatitude()));
+        ui->longtitude_modif->setText(QString::number(ev.getLongtitude()));
+
+        //ui->category_modif->currentText(ev.getCategory());//(ev.getCategory());
 
     }
 
@@ -307,9 +328,36 @@ void Evenement1::on_Tri_comboBox_currentTextChanged(const QString &arg1)
 
       }
     }
+void Evenement1::on_Statistique_button_clicked() {
+    Entite_evenment ev ;
+    // Effacer le contenu précédent du QLabel
+    ui->label_stat->clear();
 
+    // Créer la série pour le graphique
+    QtCharts::QPieSeries *series = new QtCharts::QPieSeries();
+    series->setHoleSize(0.35);
 
-void Evenement1::on_Statistique_button_clicked()
-{
+    // Ajouter les parts au graphique en utilisant la fonction countType
+    QStringList categories = {"Sports", "Comedy", "Drama", "Festival", "Concert"};
+    foreach (const QString &category, categories) {
+        int count = ev.countType(category);
+        if (count > 0) {
+            series->append(category, count);
+        }
+    }
 
+    // Créer le graphique
+    QtCharts::QChart *chart = new QtCharts::QChart();
+    chart->addSeries(series);
+    chart->setTitle("Statistiques des événements par catégorie");
+
+    // Créer la vue pour le graphique
+    QtCharts::QChartView *chartView = new QtCharts::QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+
+    // Convertir la vue en pixmap
+    QPixmap pixmap = chartView->grab();
+
+    // Afficher l'image sur le QLabel
+    ui->label_stat->setPixmap(pixmap);
 }

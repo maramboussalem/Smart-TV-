@@ -32,7 +32,7 @@
 font: 9pt &quot;Sylfaen&quot;;</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -1432,9 +1432,7 @@ background-color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-	
-</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string/>
@@ -1514,7 +1512,7 @@ background-color: rgb(255, 255, 255);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">image: url(:/new/prefix2/sousTitrage.png);</string>
       </property>
       <property name="text">
        <string/>

@@ -235,9 +235,9 @@ image: url(:/new/prefix1/u3.png);</string>
    <property name="geometry">
     <rect>
      <x>320</x>
-     <y>160</y>
+     <y>170</y>
      <width>241</width>
-     <height>41</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">

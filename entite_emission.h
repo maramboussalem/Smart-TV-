@@ -5,7 +5,7 @@
 #include <QSqlQuery>
 #include <QMessageBox>
 #include <QSqlQueryModel>
-//#include <QtCharts>
+#include <QtCharts>
 #include <QSqlQuery>
 
 #include "arduino.h"

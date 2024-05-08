@@ -4,6 +4,10 @@ QT       += charts
 QT       += printsupport
 QT       += location
 QT       += core gui  serialport
+QT       += network
+
+QT += core gui widgets charts
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets quickwidgets
 
 CONFIG += c++11
@@ -25,7 +29,11 @@ SOURCES += \
     emissions.cpp \
     employee.cpp \
     entite_emission.cpp \
+    entite_employee.cpp \
+    entite_equipement.cpp \
     entite_evenment.cpp \
+    entite_pub.cpp \
+    entite_sponsors.cpp \
     equipement.cpp \
     evenement1.cpp \
     main.cpp \
@@ -34,7 +42,9 @@ SOURCES += \
     menu.cpp \
     publicite.cpp \
     qsubtitles.cpp \
-    sponsors.cpp
+    smtp.cpp \
+    sponsors.cpp \
+    videoplayer.cpp
 
 HEADERS += \
     arduino.h \
@@ -42,7 +52,11 @@ HEADERS += \
     emissions.h \
     employee.h \
     entite_emission.h \
+    entite_employee.h \
+    entite_equipement.h \
     entite_evenment.h \
+    entite_pub.h \
+    entite_sponsors.h \
     equipement.h \
     evenement1.h \
     mainwindow.h \
@@ -50,7 +64,9 @@ HEADERS += \
     menu.h \
     publicite.h \
     qsubtitles.h \
-    sponsors.h
+    smtp.h \
+    sponsors.h \
+    videoplayer.h
 
 FORMS += \
     emissions.ui \
@@ -61,7 +77,8 @@ FORMS += \
     map.ui \
     menu.ui \
     publicite.ui \
-    sponsors.ui
+    sponsors.ui \
+    videoplayer.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -76,4 +93,6 @@ RESOURCES += \
     Emission.qrc \
     Evenement.qrc \
     Logo.qrc \
-    Maps.qrc
+    Maps.qrc \
+    l.qrc \
+    sta.qrc

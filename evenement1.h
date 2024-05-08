@@ -35,7 +35,7 @@ private slots:
 //    void on_pdf_button_clicked();
 //    void on_Tri_categorie_currentTextChanged(const QString &arg1);
 
-
+int countType(const QString &category);
 
     void on_pdf_button_clicked();
 

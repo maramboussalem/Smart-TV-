@@ -10,9 +10,10 @@ private:
     int id;
     QString titre, description, category,location;
     QDateTime date ;
+    float latitude,longtitude;
 public:
     Entite_evenment();
-    Entite_evenment(int,QString,QString,QDateTime,QString,QString);
+    Entite_evenment(int,QString,QString,QDateTime,QString,float,float);
     // Getters
       QString getTitre() const { return titre; }
       QString getCategory() const { return category; }
@@ -20,6 +21,8 @@ public:
       QString getDescription() const { return description; }
       QDateTime getDate() const { return date; }
       int getId() const { return id; }
+      float getLatitude()const{return latitude;}
+      float getLongtitude()const{return longtitude;}
 
 //    // Setters
 //    void setTitre( QString t) { this->titre = t; }
@@ -41,8 +44,9 @@ public:
     bool modifier ();
     void statistique();
     QString locationById(int id);
-
-
+int countType(const QString &category);
+int getLatitudeById(int id);
+int getLongititudeById(int id);
     Entite_evenment rechercher(int);
 };
 

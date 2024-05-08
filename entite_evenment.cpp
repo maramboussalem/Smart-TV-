@@ -6,20 +6,21 @@
 Entite_evenment::Entite_evenment(){
     this->id =-1;
 }
-Entite_evenment::Entite_evenment(int id,QString titre , QString category,QDateTime date,QString description,QString location)
+Entite_evenment::Entite_evenment(int id,QString titre , QString category,QDateTime date,QString description,float latitude,float longtitude)
 {
     this->id = id;
     this->date =date;
     this->titre =titre;
     this->description =description;
     this->category =category;
-    this->location = location;
+    this->latitude =latitude;
+    this->longtitude=longtitude;
 };
 bool Entite_evenment::ajouter(){
     // todo
     QSqlQuery query ;
   //  QString res = QString::number(id);
-    query.prepare("insert into EVENEMENTS (TITRE,CATEGORY,DESCRIPTION,DATE_EV) values (:titre,:category,:description,:date)");
+    query.prepare("insert into EVENEMENTS (TITRE,CATEGORY,DESCRIPTION,DATE_EV,LONGITITUDE,LATITUDE) values (:titre,:category,:description,:date,:longtitude,:latitude)");
    // query.bindValue(":id",res);
    // query.bindValue(":date",QDate(date));
 //     query.bindValue(":id",3);
@@ -27,6 +28,8 @@ bool Entite_evenment::ajouter(){
     query.bindValue(":category",category);
     query.bindValue(":description",description);
     query.bindValue(":date",QDateTime(date));
+    query.bindValue(":longtitude", static_cast<double>(longtitude)); // Convert to double
+    query.bindValue(":latitude", static_cast<double>(latitude));
 
     return query.exec();
 };
@@ -104,7 +107,7 @@ bool Entite_evenment::modifier(){
     // todo
     QSqlQuery query ;
     QString res = QString::number(id);
-   query.prepare("UPDATE EVENEMENTS SET TITRE = :titre, CATEGORY = :category, DESCRIPTION = :description, DATE_EV=:date  WHERE ID_EVENMENT = :id");
+   query.prepare("UPDATE EVENEMENTS SET TITRE = :titre, CATEGORY = :category, DESCRIPTION = :description, DATE_EV=:date,LONGITITUDE=:longtitude,LATITUDE=:latitude  WHERE ID_EVENMENT = :id");
     query.bindValue(":id",res);
     //query.bindValue(":date",QDate(date));
     query.bindValue(":date",date);
@@ -112,8 +115,8 @@ bool Entite_evenment::modifier(){
    // query.bindValue(":langue",langue);
     query.bindValue(":category",category);
     query.bindValue(":description",description);
-  //  query.bindValue(":horraire",horraire);
-
+    query.bindValue(":longtitude", static_cast<double>(longtitude)); // Convert to double
+       query.bindValue(":latitude", static_cast<double>(latitude));
     return query.exec();
 };
 Entite_evenment Entite_evenment::rechercher(int id)
@@ -129,7 +132,9 @@ Entite_evenment Entite_evenment::rechercher(int id)
                QDateTime date = query.value(3).toDateTime();
                QString category = query.value(4).toString();
                QString location = query.value(5).toString();
-               Entite_evenment evenment(id, titre, category, date ,description,location);
+               float latitude = query.value(5).toFloat();
+               float longtitude =  query.value(6).toFloat();
+               Entite_evenment evenment(id, titre, category, date ,description,latitude,longtitude);
                return evenment;
            }
            // Si aucune émission correspondante n'est trouvée, retourner un objet Emissions vide
@@ -239,3 +244,33 @@ QSqlQueryModel *Entite_evenment::afficher_Selon_Desc(){
 //    }
 
 
+int Entite_evenment::countType(const QString &category) {
+    QSqlQuery query;
+    query.prepare("SELECT COUNT(*) FROM EVENEMENTS WHERE CATEGORY = :category");
+    query.bindValue(":category", category);
+    query.exec();
+    if (query.next()) {
+        return query.value(0).toInt();
+    }
+    return 0;
+}
+int Entite_evenment::getLatitudeById(int id){
+        QSqlQuery query;
+             query.prepare("SELECT LATITUDE FROM EVENEMENTS WHERE ID_EVENMENT = :id_ev");
+             query.bindValue(":id_ev", id);
+             query.exec();
+             if(query.next()){
+                 int latitude = query.value(0).toInt();
+                 return latitude;
+             }
+}
+int Entite_evenment::getLongititudeById(int id){
+        QSqlQuery query;
+             query.prepare("SELECT LONGITITUDE FROM EVENEMENTS WHERE ID_EVENMENT = :id_ev");
+             query.bindValue(":id_ev", id);
+             query.exec();
+             if(query.next()){
+                 int longititude = query.value(0).toInt();
+                 return longititude;
+             }
+}
