@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "entite_sponsors.h"
 #include "sponsors.h"
 #include "ui_sponsors.h"
@@ -56,11 +57,22 @@ Sponsors::Sponsors(QWidget *parent) :
        QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
        //le slot update_label suite à la reception du signal readyRead (reception des données).
 
+=======
+#include "sponsors.h"
+#include "ui_sponsors.h"
+
+Sponsors::Sponsors(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::Sponsors)
+{
+    ui->setupUi(this);
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 }
 
 Sponsors::~Sponsors()
 {
     delete ui;
+<<<<<<< HEAD
 
 }
 
@@ -944,4 +956,6 @@ void Sponsors::on_reset_search_clicked()
 void Sponsors::on_pushButton_4_clicked()
 {
     A.write_to_arduino("1");
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 }

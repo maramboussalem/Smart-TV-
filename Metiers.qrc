@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>CALENDRIER .png</file>
+        <file>Capture.png</file>
+        <file>CodeQR.png</file>
+        <file>EMAIL.png</file>
+        <file>Historique.png</file>
+        <file>NOTIFICATION.png</file>
+        <file>PDF.png</file>
+        <file>Recherche.png</file>
+        <file>Statistiques.png</file>
+        <file>Traduction.png</file>
+    </qresource>
+</RCC>

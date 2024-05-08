@@ -1,8 +1,13 @@
 #ifndef EQUIPEMENT_H
 #define EQUIPEMENT_H
+<<<<<<< HEAD
 #include "entite_equipement.h"
 #include <QDialog>
 
+=======
+
+#include <QDialog>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 
 namespace Ui {
 class Equipement;
@@ -16,6 +21,7 @@ public:
     explicit Equipement(QWidget *parent = nullptr);
     ~Equipement();
 
+<<<<<<< HEAD
 
 private slots:
     void on_pushButton_ajouter_clicked();
@@ -48,6 +54,10 @@ private slots:
 private:
     Ui::Equipement *ui;
     entite_equipement Etmp;
+=======
+private:
+    Ui::Equipement *ui;
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 };
 
 #endif // EQUIPEMENT_H

@@ -25,6 +25,21 @@ private slots:
 
    void on_Rechercher_button_clicked();
 
+<<<<<<< HEAD
+=======
+   void on_rechercher_button_affichage_clicked();
+
+   void on_pdf_button_clicked();
+
+  // void on_comboBox_3_currentTextChanged(const QString &arg1);
+
+   void on_Tri_categorie_currentTextChanged(const QString &arg1);
+
+   void on_calendarWidget_clicked(const QDate &date);
+
+   void on_localisation_button_clicked();
+
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 private:
     Ui::Evenement *ui;
     Entite_evenment ev;

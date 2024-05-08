@@ -1,5 +1,6 @@
 #include "publicite.h"
 #include "ui_publicite.h"
+<<<<<<< HEAD
 #include "entite_pub.h"
 #include <QDate>
 #include <QString>
@@ -14,11 +15,14 @@
 #include <QPrinter>
 #include <QDebug>
 #include<QVideoWidget>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 
 Publicite::Publicite(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Publicite)
 {
+<<<<<<< HEAD
 
     ui->setupUi(this);
     ui->tableView_publicite->setModel(p.afficher());
@@ -32,12 +36,16 @@ Publicite::Publicite(QWidget *parent) :
     }
      QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
      //le slot update_label suite à la reception du signal readyRead (reception des données).
+=======
+    ui->setupUi(this);
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 }
 
 Publicite::~Publicite()
 {
     delete ui;
 }
+<<<<<<< HEAD
 
 void Publicite::on_pushButton_2_clicked() {
     int idpublicite = ui->lineEditrech->text().toInt();
@@ -454,3 +462,5 @@ void Publicite::on_pushButton_clicked()
     //A.write_to_arduino("3");  //envoyer 3 à arduino
 
 }
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3

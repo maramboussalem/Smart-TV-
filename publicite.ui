@@ -6,14 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>878</width>
     <height>647</height>
+=======
+    <width>898</width>
+    <height>646</height>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </rect>
   </property>
   <property name="windowTitle">
    <string>Publicite</string>
   </property>
   <property name="styleSheet">
+<<<<<<< HEAD
    <string notr="true"/>
   </property>
   <widget class="QTabWidget" name="tableView">
@@ -21,14 +27,28 @@
     <rect>
      <x>10</x>
      <y>10</y>
+=======
+   <string notr="true">background-color: rgb(155, 1, 1);</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      <width>861</width>
      <height>601</height>
     </rect>
    </property>
    <property name="styleSheet">
+<<<<<<< HEAD
     <string notr="true">
 font: 9pt &quot;Sylfaen&quot;;
 </string>
+=======
+    <string notr="true">background-color: rgb(227, 227, 227);
+font: 9pt &quot;Sitka&quot;;</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </property>
    <property name="currentIndex">
     <number>0</number>
@@ -37,6 +57,25 @@ font: 9pt &quot;Sylfaen&quot;;
     <attribute name="title">
      <string>Afficher</string>
     </attribute>
+<<<<<<< HEAD
+=======
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-40</y>
+       <width>941</width>
+       <height>631</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/BackRouge.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     <widget class="QScrollBar" name="verticalScrollBar">
      <property name="geometry">
       <rect>
@@ -50,6 +89,205 @@ font: 9pt &quot;Sylfaen&quot;;
       <enum>Qt::Vertical</enum>
      </property>
     </widget>
+<<<<<<< HEAD
+=======
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>150</y>
+       <width>411</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>Id</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Objectif </string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Durée</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Fréquences</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>150</y>
+       <width>321</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Remarque :</string>
+     </property>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>301</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_12">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>160</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+</string>
+      </property>
+      <property name="text">
+       <string>Envoyer</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_13">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>390</y>
+       <width>101</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>400</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/CodeQR.png);
+background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_3">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>40</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>40</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/Tri.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     <widget class="QLabel" name="label_21">
      <property name="geometry">
       <rect>
@@ -83,6 +321,48 @@ background-color: rgb(255, 255, 255);</string>
       <string/>
      </property>
     </widget>
+<<<<<<< HEAD
+=======
+    <widget class="QPushButton" name="pushButton_16">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>390</y>
+       <width>101</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>400</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/Statistiques.png);
+background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     <widget class="QLabel" name="label_41">
      <property name="geometry">
       <rect>
@@ -116,6 +396,7 @@ image: url(:/new/prefix1/Logo.png);</string>
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt; font-weight:600;&quot;&gt;STREAMFLIX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
+<<<<<<< HEAD
     <widget class="QTableView" name="tableView_publicite">
      <property name="geometry">
       <rect>
@@ -323,11 +604,32 @@ padding-right:20px;
     <zorder>pushButton_play</zorder>
     <zorder>groupBox_2</zorder>
     <zorder>groupBox</zorder>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </widget>
    <widget class="QWidget" name="tab">
     <attribute name="title">
      <string>Ajouter</string>
     </attribute>
+<<<<<<< HEAD
+=======
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>-170</x>
+       <y>0</y>
+       <width>1201</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/Background.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
@@ -341,7 +643,11 @@ padding-right:20px;
       <string notr="true">background-color: rgb(227, 227, 227);</string>
      </property>
      <property name="text">
+<<<<<<< HEAD
       <string>Id Publicite :</string>
+=======
+      <string>Id Publicité :</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -367,14 +673,23 @@ padding-right:20px;
       </rect>
      </property>
      <property name="text">
+<<<<<<< HEAD
       <string>Frequences :</string>
+=======
+      <string>Fréquences :</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_6">
      <property name="geometry">
       <rect>
+<<<<<<< HEAD
        <x>410</x>
        <y>160</y>
+=======
+       <x>440</x>
+       <y>150</y>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <width>191</width>
        <height>21</height>
       </rect>
@@ -386,8 +701,13 @@ padding-right:20px;
     <widget class="QPushButton" name="pushButton_8">
      <property name="geometry">
       <rect>
+<<<<<<< HEAD
        <x>440</x>
        <y>390</y>
+=======
+       <x>450</x>
+       <y>410</y>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <width>111</width>
        <height>31</height>
       </rect>
@@ -408,8 +728,13 @@ padding-right:20px;
     <widget class="QPushButton" name="pushButton_9">
      <property name="geometry">
       <rect>
+<<<<<<< HEAD
        <x>300</x>
        <y>390</y>
+=======
+       <x>320</x>
+       <y>410</y>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <width>111</width>
        <height>31</height>
       </rect>
@@ -424,7 +749,11 @@ padding-right:20px;
 </string>
      </property>
      <property name="text">
+<<<<<<< HEAD
       <string>Ajouter</string>
+=======
+      <string>Valider</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      </property>
     </widget>
     <widget class="QLabel" name="label_11">
@@ -437,13 +766,21 @@ padding-right:20px;
       </rect>
      </property>
      <property name="text">
+<<<<<<< HEAD
       <string>Duree :</string>
+=======
+      <string>Durée :</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      </property>
     </widget>
     <widget class="QComboBox" name="comboBox">
      <property name="geometry">
       <rect>
+<<<<<<< HEAD
        <x>410</x>
+=======
+       <x>440</x>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <y>210</y>
        <width>191</width>
        <height>22</height>
@@ -452,6 +789,7 @@ padding-right:20px;
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
+<<<<<<< HEAD
      <item>
       <property name="text">
        <string>Pas de pauvrete</string>
@@ -497,11 +835,17 @@ padding-right:20px;
        <string>Partenariats pour la realisation des objectifs</string>
       </property>
      </item>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     </widget>
     <widget class="QTimeEdit" name="timeEdit">
      <property name="geometry">
       <rect>
+<<<<<<< HEAD
        <x>410</x>
+=======
+       <x>440</x>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <y>260</y>
        <width>191</width>
        <height>22</height>
@@ -514,7 +858,11 @@ padding-right:20px;
     <widget class="QSpinBox" name="spinBox">
      <property name="geometry">
       <rect>
+<<<<<<< HEAD
        <x>410</x>
+=======
+       <x>440</x>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <y>310</y>
        <width>191</width>
        <height>22</height>
@@ -524,6 +872,7 @@ padding-right:20px;
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
+<<<<<<< HEAD
     <widget class="QPushButton" name="pushButton_addvideo">
      <property name="geometry">
       <rect>
@@ -574,16 +923,42 @@ padding-right:20px;
     <zorder>timeEdit</zorder>
     <zorder>spinBox</zorder>
     <zorder>pushButton_addvideo</zorder>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
      <string>Modifier</string>
     </attribute>
+<<<<<<< HEAD
     <widget class="QPushButton" name="pushButton_11">
      <property name="geometry">
       <rect>
        <x>440</x>
        <y>400</y>
+=======
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>-170</x>
+       <y>0</y>
+       <width>1201</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/Background.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>420</y>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <width>111</width>
        <height>31</height>
       </rect>
@@ -601,11 +976,19 @@ padding-right:20px;
       <string>Quitter</string>
      </property>
     </widget>
+<<<<<<< HEAD
     <widget class="QPushButton" name="Modifier">
      <property name="geometry">
       <rect>
        <x>300</x>
        <y>400</y>
+=======
+    <widget class="QPushButton" name="pushButton_10">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>420</y>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <width>111</width>
        <height>31</height>
       </rect>
@@ -620,6 +1003,7 @@ padding-right:20px;
 </string>
      </property>
      <property name="text">
+<<<<<<< HEAD
       <string>Modifier</string>
      </property>
     </widget>
@@ -627,6 +1011,15 @@ padding-right:20px;
      <property name="geometry">
       <rect>
        <x>410</x>
+=======
+      <string>Valider</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <y>210</y>
        <width>191</width>
        <height>22</height>
@@ -635,6 +1028,7 @@ padding-right:20px;
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
+<<<<<<< HEAD
      <item>
       <property name="text">
        <string>Pas de pauvrete</string>
@@ -680,6 +1074,8 @@ padding-right:20px;
        <string>Partenariats pour la réalisation des objectifs</string>
       </property>
      </item>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     </widget>
     <widget class="QLabel" name="label_10">
      <property name="geometry">
@@ -691,7 +1087,11 @@ padding-right:20px;
       </rect>
      </property>
      <property name="text">
+<<<<<<< HEAD
       <string>Frequences :</string>
+=======
+      <string>Fréquences :</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -704,6 +1104,7 @@ padding-right:20px;
       </rect>
      </property>
      <property name="text">
+<<<<<<< HEAD
       <string>Duree :</string>
      </property>
     </widget>
@@ -711,6 +1112,28 @@ padding-right:20px;
      <property name="geometry">
       <rect>
        <x>410</x>
+=======
+      <string>Durée :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_7">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>150</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_2">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <y>310</y>
        <width>191</width>
        <height>22</height>
@@ -733,10 +1156,33 @@ padding-right:20px;
       <string>Objectif De La Compagne :</string>
      </property>
     </widget>
+<<<<<<< HEAD
     <widget class="QTimeEdit" name="timeEdit_2_duree_M">
      <property name="geometry">
       <rect>
        <x>410</x>
+=======
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>160</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(227, 227, 227);</string>
+     </property>
+     <property name="text">
+      <string>Id Publicité :</string>
+     </property>
+    </widget>
+    <widget class="QTimeEdit" name="timeEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <y>260</y>
        <width>191</width>
        <height>22</height>
@@ -746,6 +1192,7 @@ padding-right:20px;
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
+<<<<<<< HEAD
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
@@ -816,16 +1263,42 @@ padding-right:20px;
     <zorder>pushButton_2</zorder>
     <zorder>lineEditrech</zorder>
     <zorder>label_18</zorder>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </widget>
    <widget class="QWidget" name="tab_4">
     <attribute name="title">
      <string>Supprimer</string>
     </attribute>
+<<<<<<< HEAD
     <widget class="QLabel" name="label_39">
      <property name="geometry">
       <rect>
        <x>240</x>
        <y>250</y>
+=======
+    <widget class="QLabel" name="label_38">
+     <property name="geometry">
+      <rect>
+       <x>-170</x>
+       <y>0</y>
+       <width>1201</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/Background.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_39">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>210</y>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <width>101</width>
        <height>31</height>
       </rect>
@@ -834,14 +1307,23 @@ padding-right:20px;
       <string notr="true">background-color: rgb(227, 227, 227);</string>
      </property>
      <property name="text">
+<<<<<<< HEAD
       <string>Id Publicite :</string>
+=======
+      <string>Id Publicité :</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_14">
      <property name="geometry">
       <rect>
+<<<<<<< HEAD
        <x>360</x>
        <y>250</y>
+=======
+       <x>390</x>
+       <y>210</y>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <width>161</width>
        <height>31</height>
       </rect>
@@ -872,6 +1354,7 @@ padding-right:20px;
       <string>Supprimer</string>
      </property>
     </widget>
+<<<<<<< HEAD
     <widget class="QLabel" name="label_19">
      <property name="geometry">
       <rect>
@@ -883,11 +1366,26 @@ padding-right:20px;
      </property>
      <property name="styleSheet">
       <string notr="true">image: url(:/new/prefix1/2.png);</string>
+=======
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>210</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/Recherche.png);
+background-color: rgb(255, 255, 255);</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
+<<<<<<< HEAD
     <zorder>label_19</zorder>
     <zorder>label_39</zorder>
     <zorder>lineEdit_14</zorder>
@@ -906,25 +1404,60 @@ padding-right:20px;
        <height>471</height>
       </rect>
      </property>
+=======
+    <widget class="QPushButton" name="pushButton_15">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>120</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+</string>
+     </property>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      <property name="text">
       <string/>
      </property>
     </widget>
+<<<<<<< HEAD
     <widget class="QPushButton" name="pushButton_16">
      <property name="geometry">
       <rect>
        <x>650</x>
        <y>10</y>
        <width>181</width>
+=======
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>130</y>
+       <width>41</width>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
+<<<<<<< HEAD
       <string notr="true"/>
+=======
+      <string notr="true">image: url(:/new/prefix1/PDF.png);
+background-color: rgb(255, 255, 255);</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
      </property>
      <property name="text">
       <string/>
      </property>
+<<<<<<< HEAD
      <property name="icon">
       <iconset>
        <normaloff>:/new/prefix1/Statistiques.png</normaloff>:/new/prefix1/Statistiques.png</iconset>
@@ -1041,15 +1574,55 @@ QHeaderView:section {
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(155, 1, 1);</string>
+=======
+    </widget>
+    <widget class="QPushButton" name="pushButton_17">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>120</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+</string>
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>130</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/h.png);
+background-color: rgb(255, 255, 255);</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+<<<<<<< HEAD
     <zorder>label_27</zorder>
     <zorder>tableView_publicite_2</zorder>
     <zorder>label_5</zorder>
     <zorder>pushButton_3</zorder>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </widget>
   </widget>
  </widget>

@@ -1,5 +1,6 @@
 #include "equipement.h"
 #include "ui_equipement.h"
+<<<<<<< HEAD
 #include <QApplication>
 #include <QMessageBox>
 #include <QLineEdit>
@@ -8,18 +9,25 @@
 #include <QFile>
 #include <QFileDialog>
 #include "entite_equipement.h"
+=======
+
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 Equipement::Equipement(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Equipement)
 {
     ui->setupUi(this);
+<<<<<<< HEAD
        ui->tableViewafficherEquipement->setModel(Etmp.afficher());
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 }
 
 Equipement::~Equipement()
 {
     delete ui;
 }
+<<<<<<< HEAD
 void Equipement::on_pushButton_ajouter_clicked()
 {
     int id_equipement = ui->lineEdit_idequipement->text().toInt();
@@ -224,3 +232,5 @@ void Equipement::on_pushButton_3_clicked()
 {
 
 }
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3

@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "menu.h"
 #include <QMessageBox>
+<<<<<<< HEAD
 #include <QDebug>
 #include <QSqlError>
 #include "employee.h"
@@ -20,12 +21,20 @@ MainWindow::MainWindow(QWidget *parent) :
     case(-1):qDebug() << "arduino is not available";
     }
      QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+=======
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+<<<<<<< HEAD
 void MainWindow::update_label()
 {
     data = A.read_from_arduino();
@@ -106,3 +115,12 @@ void MainWindow::on_Retour_clicked()
     }
 }
 
+=======
+
+
+void MainWindow::on_Connecter_clicked()
+{
+    Menu menuDialog;
+    menuDialog.exec();
+}
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3

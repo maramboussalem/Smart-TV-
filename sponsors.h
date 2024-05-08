@@ -1,8 +1,14 @@
 #ifndef SPONSORS_H
 #define SPONSORS_H
+<<<<<<< HEAD
 #include "entite_sponsors.h"
 #include <QDialog>
 #include "arduino.h"
+=======
+
+#include <QDialog>
+
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 namespace Ui {
 class Sponsors;
 }
@@ -14,6 +20,7 @@ class Sponsors : public QDialog
 public:
     explicit Sponsors(QWidget *parent = nullptr);
     ~Sponsors();
+<<<<<<< HEAD
 private slots:
     void update_label();
     void on_button_ajouter_clicked();
@@ -106,6 +113,11 @@ private:
 
     int countType(const QString &category);
        void createColorfulCircleChart();
+=======
+
+private:
+    Ui::Sponsors *ui;
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 };
 
 #endif // SPONSORS_H

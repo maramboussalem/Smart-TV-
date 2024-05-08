@@ -1,5 +1,6 @@
 #ifndef PUBLICITE_H
 #define PUBLICITE_H
+<<<<<<< HEAD
 #include "entite_pub.h"
 #include <QMainWindow>
 #include <QTableView>
@@ -7,6 +8,10 @@
 #include <QFileDialog>
 #include "videoplayer.h"
 #include "arduino.h"
+=======
+
+#include <QDialog>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 
 namespace Ui {
 class Publicite;
@@ -19,6 +24,7 @@ class Publicite : public QDialog
 public:
     explicit Publicite(QWidget *parent = nullptr);
     ~Publicite();
+<<<<<<< HEAD
 private slots:
 
     void on_pushButton_14_clicked();
@@ -61,6 +67,11 @@ private:
     QByteArray data; // variable contenant les données reçues
 
     Arduino A; // objet temporaire
+=======
+
+private:
+    Ui::Publicite *ui;
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 };
 
 #endif // PUBLICITE_H

@@ -1,5 +1,6 @@
 #include "employee.h"
 #include "ui_employee.h"
+<<<<<<< HEAD
 #include <QApplication>
 #include <QMessageBox>
 #include <QtCharts>
@@ -8,18 +9,25 @@
 #include <QtSql/QSqlQuery>
 #include <QSqlDatabase>
 #include "entite_employee.h"
+=======
+
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 Employee::Employee(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Employee)
 {
     ui->setupUi(this);
+<<<<<<< HEAD
     ui->tableView_2->setModel(etmp.afficher());
     smtp = new Smtp("eya.ketata@esprit.tn", "221JFT2454", "smtp.gmail.com", 465); // Initialisez Smtp avec vos informations
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 }
 
 Employee::~Employee()
 {
     delete ui;
+<<<<<<< HEAD
     delete smtp;
 }
 void Employee::on_pushButton_Modifier_clicked()
@@ -265,4 +273,6 @@ void Employee::on_pushButton_2_clicked()
         }
 
         QMessageBox::information(this, tr("PDF Enregistré!"), tr("PDF Enregistré!.\n" "Click Ok to exit."), QMessageBox::Ok);
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 }

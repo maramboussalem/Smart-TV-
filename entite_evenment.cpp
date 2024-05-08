@@ -6,21 +6,33 @@
 Entite_evenment::Entite_evenment(){
     this->id =-1;
 }
+<<<<<<< HEAD
 Entite_evenment::Entite_evenment(int id,QString titre , QString category,QDateTime date,QString description,float latitude,float longtitude)
+=======
+Entite_evenment::Entite_evenment(int id,QString titre , QString category,QDateTime date,QString description,QString location)
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 {
     this->id = id;
     this->date =date;
     this->titre =titre;
     this->description =description;
     this->category =category;
+<<<<<<< HEAD
     this->latitude =latitude;
     this->longtitude=longtitude;
+=======
+    this->location = location;
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 };
 bool Entite_evenment::ajouter(){
     // todo
     QSqlQuery query ;
   //  QString res = QString::number(id);
+<<<<<<< HEAD
     query.prepare("insert into EVENEMENTS (TITRE,CATEGORY,DESCRIPTION,DATE_EV,LONGITITUDE,LATITUDE) values (:titre,:category,:description,:date,:longtitude,:latitude)");
+=======
+    query.prepare("insert into EVENEMENTS (TITRE,CATEGORY,DESCRIPTION,DATE_EV,LOCATION) values (:titre,:category,:description,:date,:location)");
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    // query.bindValue(":id",res);
    // query.bindValue(":date",QDate(date));
 //     query.bindValue(":id",3);
@@ -28,9 +40,13 @@ bool Entite_evenment::ajouter(){
     query.bindValue(":category",category);
     query.bindValue(":description",description);
     query.bindValue(":date",QDateTime(date));
+<<<<<<< HEAD
     query.bindValue(":longtitude", static_cast<double>(longtitude)); // Convert to double
     query.bindValue(":latitude", static_cast<double>(latitude));
 
+=======
+    query.bindValue(":location",location);
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     return query.exec();
 };
 bool Entite_evenment::supprimer(int id){
@@ -107,7 +123,11 @@ bool Entite_evenment::modifier(){
     // todo
     QSqlQuery query ;
     QString res = QString::number(id);
+<<<<<<< HEAD
    query.prepare("UPDATE EVENEMENTS SET TITRE = :titre, CATEGORY = :category, DESCRIPTION = :description, DATE_EV=:date,LONGITITUDE=:longtitude,LATITUDE=:latitude  WHERE ID_EVENMENT = :id");
+=======
+   query.prepare("UPDATE EVENEMENTS SET TITRE = :titre, CATEGORY = :category, DESCRIPTION = :description, DATE_EV=:date  WHERE ID_EVENMENT = :id");
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     query.bindValue(":id",res);
     //query.bindValue(":date",QDate(date));
     query.bindValue(":date",date);
@@ -115,8 +135,13 @@ bool Entite_evenment::modifier(){
    // query.bindValue(":langue",langue);
     query.bindValue(":category",category);
     query.bindValue(":description",description);
+<<<<<<< HEAD
     query.bindValue(":longtitude", static_cast<double>(longtitude)); // Convert to double
        query.bindValue(":latitude", static_cast<double>(latitude));
+=======
+  //  query.bindValue(":horraire",horraire);
+
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
     return query.exec();
 };
 Entite_evenment Entite_evenment::rechercher(int id)
@@ -132,14 +157,19 @@ Entite_evenment Entite_evenment::rechercher(int id)
                QDateTime date = query.value(3).toDateTime();
                QString category = query.value(4).toString();
                QString location = query.value(5).toString();
+<<<<<<< HEAD
                float latitude = query.value(5).toFloat();
                float longtitude =  query.value(6).toFloat();
                Entite_evenment evenment(id, titre, category, date ,description,latitude,longtitude);
+=======
+               Entite_evenment evenment(id, titre, category, date ,description,location);
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
                return evenment;
            }
            // Si aucune émission correspondante n'est trouvée, retourner un objet Emissions vide
      return Entite_evenment();
 }
+<<<<<<< HEAD
 QSqlQueryModel *Entite_evenment::afficher_Selon_Asc(){
     QSqlQueryModel * model = new QSqlQueryModel;
     QSqlQuery query ;
@@ -177,6 +207,18 @@ QSqlQueryModel *Entite_evenment::afficher_Selon_Desc(){
 //             return location;
 //         }
 //}
+=======
+QString Entite_evenment::locationById(int id){
+    QSqlQuery query;
+         query.prepare("SELECT LOCATION FROM EVENEMENTS WHERE ID_EVENMENT = :id_ev");
+         query.bindValue(":id_ev", id);
+         query.exec();
+         if(query.next()){
+             QString location = query.value(0).toString();
+             return location;
+         }
+}
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 // statistique
 //void Entite_evenment::statistique(){
 //    QSqlQuery query("SELECT categorie, COUNT(*) FROM emissions GROUP BY categorie");
@@ -244,6 +286,7 @@ QSqlQueryModel *Entite_evenment::afficher_Selon_Desc(){
 //    }
 
 
+<<<<<<< HEAD
 int Entite_evenment::countType(const QString &category) {
     QSqlQuery query;
     query.prepare("SELECT COUNT(*) FROM EVENEMENTS WHERE CATEGORY = :category");
@@ -274,3 +317,5 @@ int Entite_evenment::getLongititudeById(int id){
                  return longititude;
              }
 }
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3

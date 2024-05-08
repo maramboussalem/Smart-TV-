@@ -6,16 +6,40 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>878</width>
     <height>630</height>
+=======
+    <width>857</width>
+    <height>628</height>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </rect>
   </property>
   <property name="windowTitle">
    <string>Menu</string>
   </property>
+<<<<<<< HEAD
   <property name="styleSheet">
    <string notr="true">background-color: rgb(155, 1, 1);</string>
   </property>
+=======
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-70</x>
+     <y>-40</y>
+     <width>1011</width>
+     <height>711</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/new/prefix1/BackRouge.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
   <widget class="QLabel" name="label_40">
    <property name="geometry">
     <rect>
@@ -59,9 +83,12 @@ font: 19pt &quot;Sitka&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+<<<<<<< HEAD
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    <property name="text">
     <string/>
    </property>
@@ -75,9 +102,12 @@ font: 19pt &quot;Sitka&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+<<<<<<< HEAD
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    <property name="text">
     <string/>
    </property>
@@ -91,9 +121,12 @@ font: 19pt &quot;Sitka&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+<<<<<<< HEAD
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    <property name="text">
     <string/>
    </property>
@@ -107,9 +140,12 @@ font: 19pt &quot;Sitka&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+<<<<<<< HEAD
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    <property name="text">
     <string/>
    </property>
@@ -123,9 +159,12 @@ font: 19pt &quot;Sitka&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+<<<<<<< HEAD
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    <property name="text">
     <string/>
    </property>
@@ -139,9 +178,12 @@ font: 19pt &quot;Sitka&quot;;</string>
      <height>61</height>
     </rect>
    </property>
+<<<<<<< HEAD
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    <property name="text">
     <string/>
    </property>
@@ -190,8 +232,12 @@ image: url(:/new/prefix1/u6.png);</string>
     </rect>
    </property>
    <property name="styleSheet">
+<<<<<<< HEAD
     <string notr="true">font: 9pt &quot;Sitka&quot;;
 background-color: rgb(255, 255, 255);</string>
+=======
+    <string notr="true">font: 9pt &quot;Sitka&quot;;</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </property>
    <property name="text">
     <string>GESTION DES ÉMISSIONS </string>
@@ -235,6 +281,7 @@ image: url(:/new/prefix1/u3.png);</string>
    <property name="geometry">
     <rect>
      <x>320</x>
+<<<<<<< HEAD
      <y>170</y>
      <width>241</width>
      <height>21</height>
@@ -243,6 +290,15 @@ image: url(:/new/prefix1/u3.png);</string>
    <property name="styleSheet">
     <string notr="true">font: 9pt &quot;Sitka&quot;;
 background-color: rgb(255, 255, 255);</string>
+=======
+     <y>160</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;Sitka&quot;;</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </property>
    <property name="text">
     <string>GESTION DES EMPLOYÉ</string>
@@ -275,8 +331,12 @@ image: url(:/new/prefix1/u5.png);</string>
     </rect>
    </property>
    <property name="styleSheet">
+<<<<<<< HEAD
     <string notr="true">background-color: rgb(255, 255, 255);
 font: 9pt &quot;Sitka&quot;;</string>
+=======
+    <string notr="true">font: 9pt &quot;Sitka&quot;;</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </property>
    <property name="text">
     <string>GESTION DES SPONSORS </string>
@@ -292,8 +352,12 @@ font: 9pt &quot;Sitka&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
+<<<<<<< HEAD
     <string notr="true">background-color: rgb(255, 255, 255);
 font: 9pt &quot;Sitka&quot;;</string>
+=======
+    <string notr="true">font: 9pt &quot;Sitka&quot;;</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </property>
    <property name="text">
     <string>GESTION DES ÉQUIPEMENTS</string>
@@ -309,8 +373,12 @@ font: 9pt &quot;Sitka&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
+<<<<<<< HEAD
     <string notr="true">background-color: rgb(255, 255, 255);
 font: 9pt &quot;Sitka&quot;;</string>
+=======
+    <string notr="true">font: 9pt &quot;Sitka&quot;;</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </property>
    <property name="text">
     <string>GESTION DES ÉVÉNEMENTS</string>
@@ -343,8 +411,12 @@ image: url(:/new/prefix1/u1.png);</string>
     </rect>
    </property>
    <property name="styleSheet">
+<<<<<<< HEAD
     <string notr="true">background-color: rgb(255, 255, 255);
 font: 9pt &quot;Sitka&quot;;</string>
+=======
+    <string notr="true">font: 9pt &quot;Sitka&quot;;</string>
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
    </property>
    <property name="text">
     <string>GESTION DES PUBLICITÉ</string>

@@ -2,6 +2,7 @@
 #define EMISSION_H
 #include "entite_emission.h"
 #include <QDialog>
+<<<<<<< HEAD
 #include <QMainWindow>
 
 #include <QtMultimediaWidgets>
@@ -19,6 +20,8 @@
 #include <QVBoxLayout>
 #include <QMessageBox>
 #include "arduino.h"
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 
 namespace Ui {
 class Emission;
@@ -27,11 +30,16 @@ class Emission;
 class Emission : public QDialog
 {
     Q_OBJECT
+<<<<<<< HEAD
+=======
+
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 public:
     explicit Emission(QWidget *parent = nullptr);
     ~Emission();
 
 private slots:
+<<<<<<< HEAD
 
     void update_label();
 
@@ -93,6 +101,17 @@ private:
 
     QByteArray data; // variable contenant les données reçues
     Arduino A; // objet temporaire
+=======
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_14_clicked();
+
+    void on_pushButton_10_clicked();
+
+private:
+    Ui::Emission *ui;
+    Entite_emission em;
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 };
 
 #endif // EMISSION_H

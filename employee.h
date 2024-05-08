@@ -2,9 +2,13 @@
 #define EMPLOYEE_H
 
 #include <QDialog>
+<<<<<<< HEAD
 #include <QMainWindow>
 #include "entite_employee.h"
 #include "smtp.h"
+=======
+
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 namespace Ui {
 class Employee;
 }
@@ -17,6 +21,7 @@ public:
     explicit Employee(QWidget *parent = nullptr);
     ~Employee();
 
+<<<<<<< HEAD
 private slots:
     void on_pushButton_Ajouter_clicked();
 
@@ -62,6 +67,10 @@ private:
     Ui::Employee *ui;
     Smtp *smtp;
     entite_employee etmp;
+=======
+private:
+    Ui::Employee *ui;
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 };
 
 #endif // EMPLOYEE_H

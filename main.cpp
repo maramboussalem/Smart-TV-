@@ -1,12 +1,16 @@
 #include "mainwindow.h"
 #include "connection.h"
 #include <QApplication>
+<<<<<<< HEAD
 #include <QMessageBox>
+=======
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Connection c ;
+<<<<<<< HEAD
 
     MainWindow w;
 
@@ -29,3 +33,10 @@ int main(int argc, char *argv[])
      return a.exec();
 }
 
+=======
+    bool test = c.createconnection();
+    MainWindow w;
+    w.show();
+    return a.exec();
+}
+>>>>>>> 18d955075ebf7e49d498a0f477c7a42083282ca3
